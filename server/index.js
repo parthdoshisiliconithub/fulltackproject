@@ -24,7 +24,7 @@ const data = require('./data/index')
 
 dotenv.config()
 app.use(express.json())
-// app.use(morgan('common'))
+// app.use(morgan('tiny'))
 app.use(cors())
 app.use(helmet())
 app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }))

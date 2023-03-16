@@ -15,7 +15,7 @@ const LoginPage = () => {
         textAlign={"center"}
       >
         <Typography fontWeight={"bold"} fontSize={"32px"} color="primary">
-          Sociopedia
+          Welcome to Sociopedia!
         </Typography>
       </Box>
       <Box
@@ -25,9 +25,9 @@ const LoginPage = () => {
         borderRadius={"1.5rem"}
         backgroundColor={theme.palette.background.alt}
       >
-        <Typography fontWeight={"500"} variant="h5" sx={{ mb: "1.5rem" }}>
-          Welcome to Sociopedia!
-        </Typography> 
+        <Typography fontWeight={"500"} variant="h5" sx={{ mb: "1.5rem" , textAlign:'center', color:'#00D5FA', fontSize:'50px', fontFamily:'fantasy'}}>
+          Login
+        </Typography>
         <Form />
       </Box>
     </Box>

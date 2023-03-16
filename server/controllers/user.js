@@ -43,7 +43,7 @@ const addRemoveFriend = async (req, res) => {
         const { id, friendId } = req.params
         const user = await User.findById(id)
         const friend = await User.findById(friendId)
-
+  
         if (user.friends.includes(friendId)) {
             //if friendid includes then remove from friend list 
             user.friends = user.friends.filter((id) => id !== friendId)
@@ -53,7 +53,6 @@ const addRemoveFriend = async (req, res) => {
             user.friends.push(friendId)
             friend.friends.push(id)
         }
-
         await user.save();
         await friend.save();
         const friends = await Promise.all(

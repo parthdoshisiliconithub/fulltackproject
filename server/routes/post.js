@@ -4,7 +4,7 @@ const verifytoken = require('../middleware/auth')
 
 /* READ  */
 route.get('/', verifytoken, controllers.getFeedPosts)
-route.get('/:userId/posts', verifytoken, controllers.getUserPosts)
+route.get('/:userId', verifytoken, controllers.getUserPosts)
 
 
 /* UPDATE */
