@@ -144,7 +144,7 @@ const users = [
     },
   ];
   
-   const posts = [
+const posts = [
     {
       _id: new mongoose.Types.ObjectId(),
       userId: userIds[1],

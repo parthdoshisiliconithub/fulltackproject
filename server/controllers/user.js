@@ -43,7 +43,6 @@ const addRemoveFriend = async (req, res) => {
         const { id, friendId } = req.params
         const user = await User.findById(id)
         const friend = await User.findById(friendId)
-  
         if (user.friends.includes(friendId)) {
             //if friendid includes then remove from friend list 
             user.friends = user.friends.filter((id) => id !== friendId)

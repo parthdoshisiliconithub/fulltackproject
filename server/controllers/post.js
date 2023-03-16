@@ -81,4 +81,6 @@ const likePost = async (req, res) => {
     }
 }
 
+
+;
 module.exports = { createPost, getFeedPosts, getUserPosts, likePost }

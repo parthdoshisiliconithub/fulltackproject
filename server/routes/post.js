@@ -8,6 +8,6 @@ route.get('/:userId', verifytoken, controllers.getUserPosts)
 
 
 /* UPDATE */
-route.patch('/:id/like', verifytoken, controllers.likePost)
+route.put('/:id/like', verifytoken, controllers.likePost)
 
 module.exports = route

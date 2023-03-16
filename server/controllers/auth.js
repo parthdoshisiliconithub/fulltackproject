@@ -62,7 +62,7 @@ const login = async (req, res) => {
 
         const isMatch = await bcrypt.compare(password, user.password)
         if (!isMatch) return res.status(400).json({
-            message: 'Invalid credentials'
+            message: 'Invalid Email Id or Password'
         })
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
         delete user.password;

@@ -32,9 +32,9 @@ const Postwidget = ({
   const primary = palette.primary.main;
   const main = palette.neutral.main;
   const loginId = useSelector((state) => state.user._id);
-  const isLiked = likes ? Boolean(likes[loginId]) : false;
-  const likeCount = likes ? Object.keys(likes).length : 0;
-  console.log("login id is", loginId);
+  const isLiked = Boolean(likes[loginId]);
+  const likeCount = Object.keys(likes).length;
+
   const patchLike = async () => {
     await axios
       .put(
@@ -43,15 +43,13 @@ const Postwidget = ({
         {
           headers: {
             Authorization: `Bearer ${token}`,
-            "Content-Type": "appication/json",
           },
         }
       )
       .then((data) => {
-        dispatch(setPost({ posts: data.data }));
+        dispatch(setPost({ post: data.data }));
       })
       .catch((err) => {
-        console.log("Error is", err);
       });
   };
 

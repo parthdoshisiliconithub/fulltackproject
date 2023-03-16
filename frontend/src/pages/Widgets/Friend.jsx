@@ -28,7 +28,6 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
         },
       })
       .then((data) => {
-        console.log("Data is", data)
         dispatch(setFriends({ friends: data.data }));
       });
   };
@@ -52,7 +51,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
                   color: palette.primary.light,
                   cursor: "pointer",
                 },
-              }}
+              }}  
             >
               {name}
             </Typography>
